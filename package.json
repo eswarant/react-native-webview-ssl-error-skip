@@ -8,7 +8,7 @@
     "Thibault Malbranche <malbranche.thibault@gmail.com>"
   ],
   "license": "MIT",
-  "version": "11.15.4",
+  "version": "11.15.5",
   "homepage": "https://github.com/eswarant/react-native-webview-ssl-error-skip#readme",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
