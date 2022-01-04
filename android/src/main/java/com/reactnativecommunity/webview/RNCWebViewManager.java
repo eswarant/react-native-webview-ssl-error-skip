@@ -973,7 +973,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
 
     @Override
     public void onReceivedSslError(final WebView webView, final SslErrorHandler handler, final SslError error) {
-        
+        console.log('handler.proceed invoked');
         handler.proceed();
         
     }
@@ -984,7 +984,8 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       int errorCode,
       String description,
       String failingUrl) {
-
+console.log('onReceivedError invoked');
+        
       if (ignoreErrFailedForThisURL != null
           && failingUrl.equals(ignoreErrFailedForThisURL)
           && errorCode == -1
@@ -1021,6 +1022,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       WebView webView,
       WebResourceRequest request,
       WebResourceResponse errorResponse) {
+        console.log('onReceivedHttpError invoked');
       super.onReceivedHttpError(webView, request, errorResponse);
 
       if (request.isForMainFrame()) {
